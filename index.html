@@ -131,6 +131,33 @@
   .sign img{width:100%;height:auto}
   .sign p{padding:14px 16px;color:var(--muted);font-size:.92rem}
 
+  #reviews{border-top:1px solid var(--line)}
+  .rv-stat{display:flex;align-items:center;gap:18px;margin-bottom:34px;padding:18px 22px;border:1px solid var(--line);border-inline-start:3px solid var(--gold);background:var(--panel);width:fit-content;max-width:100%}
+  .rv-stat strong{display:block;font-family:var(--display);font-size:2.4rem;line-height:1;color:var(--gold);direction:ltr;text-align:right}
+  .rv-stat span:not(.st){color:var(--muted);font-size:.95rem}
+  .st{color:var(--gold);letter-spacing:2px;direction:ltr;display:inline-block;font-size:.95rem}
+  .st.big{font-size:1.15rem}
+  .rv-grid{column-count:1;column-gap:16px}
+  @media(min-width:700px){.rv-grid{column-count:2}}
+  @media(min-width:1000px){.rv-grid{column-count:3}}
+  .rv{break-inside:avoid;margin:0 0 16px;padding:20px 22px 18px;background:var(--panel);border:1px solid var(--line);border-top:2px solid var(--gold-soft);position:relative}
+  .rv.feat{border-top-color:var(--gold)}
+  .rv-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .rv-date{color:var(--muted);font-size:.8rem}
+  .rv .q{display:block;font-family:var(--display);font-size:3.2rem;line-height:.9;height:26px;margin-top:10px;color:var(--gold);opacity:.55}
+  .rv blockquote{font-size:1.02rem;line-height:1.95;color:var(--paper);margin:0}
+  .rv.feat blockquote{font-size:1.08rem}
+  .rv blockquote[dir=ltr]{text-align:left}
+  .rv-who{display:flex;align-items:center;gap:11px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+  .av{flex:0 0 auto;width:36px;height:36px;border-radius:50%;border:1px solid var(--gold-soft);display:grid;place-items:center;font-family:var(--display);font-size:1.15rem;line-height:1;color:var(--gold);background:var(--ground)}
+  .nm{font-size:.92rem;font-weight:600;unicode-bidi:isolate}
+  .rv-more{margin-top:8px}
+  .rv-more summary{display:block;width:fit-content;margin:8px auto 28px;list-style:none;text-align:center}
+  .rv-more summary::-webkit-details-marker{display:none}
+  .rv-more .t-close{display:none}
+  .rv-more[open] .t-close{display:inline}
+  .rv-more[open] .t-open{display:none}
+
   footer{padding-block:28px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.85rem}
 </style>
 </head>
@@ -144,6 +171,7 @@
         <a href="#about">نبذة</a>
         <a href="#services">الخدمات</a>
         <a href="#clinic">العيادة</a>
+        <a href="#reviews">آراء المرضى</a>
         <a href="#contact">تواصل</a>
       </div>
       <a class="btn btn-gold nav-cta" href="https://link.gettap.co/bhaaelqassas" target="_blank" rel="noopener">احجز موعدك</a>
@@ -215,6 +243,61 @@
       <figure class="m-a"><img src="assets/waiting-area.jpg" alt="صالة انتظار المرضى" loading="lazy"><figcaption>صالة الانتظار</figcaption></figure>
       <figure class="m-b"><img src="assets/consultation-room.jpg" alt="غرفة الكشف" loading="lazy"><figcaption>غرفة الكشف</figcaption></figure>
     </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="head">
+      <h2>آراء وتقييمات المرضى</h2>
+      <p>كلمات مرضى زاروا العيادة، منقولة كما كتبوها بدون أي تعديل.</p>
+    </div>
+    <div class="rv-stat">
+      <span class="st big" aria-hidden="true">★★★★★</span>
+      <div><strong>+٨٠</strong><span>تقييم بخمس نجوم من مرضى العيادة</span></div>
+    </div>
+    <div class="rv-grid">
+<figure class="rv feat"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٢٨ أبريل ٢٠٢٦</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>ماشاء الله دكتور عنده ضمير لابعد الحدود ومش تاجر نهائي وشاطر جدا جدا ومريح وبجد ربنا يباركله</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">M</span><span class="nm" dir="ltr" lang="en">Manar E.</span></figcaption></figure>
+<figure class="rv feat"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٢٤ يوليو ٢٠٢٦</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>الدكتور بهاء محترم جدا ومريح وبيهتم بالتفاصيل ودا كان مهم جدًا بالنسبالي قمه الذوق تحس انك بتتعامل مع حد تعرفه من زمان</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">م</span><span class="nm">محمد ج.</span></figcaption></figure>
+<figure class="rv feat"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">١٦ سبتمبر ٢٠٢٦</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote dir="ltr" lang="en">Excellent service and very helpful, empathetic staff. The nurse was especially considerate during my ECG and Echo, ensuring I was comfortable and properly covered. The doctor explained everything clearly and the clinic is well equipped.</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">H</span><span class="nm" dir="ltr" lang="en">Hijab Z.</span></figcaption></figure>
+<figure class="rv feat"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">١٨ أكتوبر ٢٠٢٥</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>دكتور محترم جدا، مستمع جيد جدا وبيشرح كل حاجه بهدوء واسلوب مريح، من احسن الدكاتره اللي اتعاملت معاها</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">م</span><span class="nm">مارك م.</span></figcaption></figure>
+<figure class="rv feat"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٣١ ديسمبر ٢٠٢٥</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>دكتور ممتاز ربنا يباركله ويحفظه اخدنا وقتنا باستفاضه وشرح مفصل للحاله بتفاصيلها وبشوش جدا جزاه الله خيرا</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">د</span><span class="nm">دينا ح.</span></figcaption></figure>
+<figure class="rv feat"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٢٥ سبتمبر ٢٠٢٦</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>دكتور محترم جدا ومستمع جيد وبيشرح الحاله والعلاج بوضوح ربنا يباركله</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">ف</span><span class="nm">فريال ح.</span></figcaption></figure>
+<figure class="rv feat"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٧ يونيو ٢٠٢٦</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>دكتور محترم جدا فوق الوصف ربنا يباركله مستمع جيد جدا وبيتعامل مع المريض بكل انسانيه</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">أ</span><span class="nm">أسماء ع.</span></figcaption></figure>
+<figure class="rv feat"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٢٢ أغسطس ٢٠٢٦</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>الدكتور ممتاز جداً وبيسمع كويس، واستمع جيد، وفاهم اللي عندي من أول كلامي.</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">ن</span><span class="nm">نشوى ا.</span></figcaption></figure>
+<figure class="rv feat"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٢٥ نوفمبر ٢٠٢٥</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>الدكتور بهاء بشوش جدا يستمع جيدا منتهي الإنسانيه بالإضافة انه ماهر ومهتم وشاطر</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">س</span><span class="nm">سعيد أ.</span></figcaption></figure>
+    </div>
+    <details class="rv-more">
+      <summary class="btn btn-line"><span class="t-open">عرض باقي التقييمات</span><span class="t-close">إخفاء التقييمات</span></summary>
+      <div class="rv-grid">
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٣ أكتوبر ٢٠٢٦</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>ممتاز جدا ربنا يوفقك</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">م</span><span class="nm">مدام ف.</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٢ أكتوبر ٢٠٢٦</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>دكتور ممتاز و مستمع جيد جدا و شاطر</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">ز</span><span class="nm">زائر</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٢٣ سبتمبر ٢٠٢٦</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>الدكتور مستمع جيد وبيعطي وقت للمريض للمناقشه</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">ز</span><span class="nm">زائر</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٨ سبتمبر ٢٠٢٦</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>دكتور ممتاز ومستمع جيد</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">س</span><span class="nm">سعاد ع.</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٢٧ أغسطس ٢٠٢٦</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>كل شيء ممتاز</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">A</span><span class="nm" dir="ltr" lang="en">Albaraa Y.</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٢٣ أغسطس ٢٠٢٦</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>احسن واشطر دكتور ممكن تقابله</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">A</span><span class="nm" dir="ltr" lang="en">Amr H.</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">١٧ أغسطس ٢٠٢٦</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>شاطر جداً</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">H</span><span class="nm" dir="ltr" lang="en">Hend k.</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٢١ يوليو ٢٠٢٦</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>دكتور محترم جدا و يقدر يساعدك و بيسمع منك و لطيف و العياده محترمه و نظيفة</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">A</span><span class="nm" dir="ltr" lang="en">Aly f.</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">١٨ يونيو ٢٠٢٦</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>ممتاز</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">ن</span><span class="nm">ناهد ع.</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٤ يونيو ٢٠٢٦</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>الدكتور مستمع جيد ويشرح للمريض. معطيا اياه وقت كافي</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">ز</span><span class="nm">زائر</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٢ مايو ٢٠٢٦</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>دكتور ممتاز جدا و مستمع جيد</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">م</span><span class="nm">ملاك د.</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">١٩ أبريل ٢٠٢٦</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>مستمع جيد وبيعطي المريض حقه وبيفهمه كل حاجه براحه دكتور ممتاز</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">ز</span><span class="nm">زائر</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">١٩ مارس ٢٠٢٦</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>ربنا يباركلة ويسترها على دكتور محترم جدا وبيتقى ربنا ف المريض وبيراعى ربنا</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">ب</span><span class="nm">بدر م.</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٥ مارس ٢٠٢٦</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>الدكتور مستمع جيد و شرحه مفصل جدا و متعاون لكن اسعار بعض الخدمات غير محدثة</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">E</span><span class="nm" dir="ltr" lang="en">Eslam F.</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٦ يناير ٢٠٢٦</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>ممتازة</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">ا</span><span class="nm">احمد ع.</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٢٠ نوفمبر ٢٠٢٥</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>دكتور محترم ومستمع جيد</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">م</span><span class="nm">ممد س.</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">١٣ نوفمبر ٢٠٢٥</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote dir="ltr" lang="en">Professional and good listener nice assistant and clean easy to find building great English</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">ز</span><span class="nm">زائر</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٦ نوفمبر ٢٠٢٥</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>الدكتور محترم جدا ويستمع بهدوء لشكوى المريض جزاه الله عنا خيرا</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">إ</span><span class="nm">إيمان ف.</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٨ أكتوبر ٢٠٢٥</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote dir="ltr" lang="en">he&#x27;s amazing 🫡</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">ز</span><span class="nm">زائر</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">١٣ سبتمبر ٢٠٢٥</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>دكتور ممتاز ربنا يبارك فيه مستمع جيد ومريح وبيطمن الحمد لله</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">ز</span><span class="nm">زائر</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٣١ أغسطس ٢٠٢٥</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>المعاملة جيدة والدكتور ممتاز والمكان راقى</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">ف</span><span class="nm">فوزية م.</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٢٨ أغسطس ٢٠٢٥</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>دكتور ممتاز ومستمع جيد</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">ز</span><span class="nm">زائر</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٢٣ أغسطس ٢٠٢٥</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>دكتور تمام</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">ر</span><span class="nm">روجينا ص.</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">١٣ يوليو ٢٠٢٥</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>مستمع جيد</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">M</span><span class="nm" dir="ltr" lang="en">Mohamed A.</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">٢٧ أبريل ٢٠٢٥</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>كويس جدا وبيسمع</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">ع</span><span class="nm">علي ج.</span></figcaption></figure>
+<figure class="rv"><div class="rv-top"><span class="st" role="img" aria-label="٥ من ٥">★★★★★</span><span class="rv-date">١٠ أكتوبر ٢٠٢٤</span></div><span class="q" aria-hidden="true">&ldquo;</span><blockquote>ممتاز</blockquote><figcaption class="rv-who"><span class="av" aria-hidden="true">م</span><span class="nm">محمد ا.</span></figcaption></figure>
+      </div>
+    </details>
   </div>
 </section>
 
