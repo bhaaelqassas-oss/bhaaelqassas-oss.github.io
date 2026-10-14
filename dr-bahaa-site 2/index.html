@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>د. بهاء القصاص | استشاري أمراض القلب والقسطرة القلبية - المعادي</title>
+<meta name="description" content="د. بهاء القصاص، استشاري أمراض القلب والقسطرة القلبية بمعهد القلب القومي. عيادة في المعادي الجديدة، القاهرة. احجز موعدك الآن.">
+<meta name="keywords" content="دكتور قلب في المعادي, استشاري قلب, قسطرة قلبية, هولتر, إيكو, د. بهاء القصاص">
+<meta property="og:title" content="د. بهاء القصاص | استشاري أمراض القلب والقسطرة القلبية">
+<meta property="og:description" content="عيادات الشرق التخصصي، المعادي الجديدة. تشخيص ومتابعة وعلاج أمراض القلب.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Layout: dark teal ground, gold used only for action and the ECG trace; doctor portrait beside the headline, clinic photos as a mosaic. */
+  :root{
+    color-scheme:dark;
+    --ground:#0f1f27;
+    --panel:#142b36;
+    --paper:#ede6d8;
+    --muted:#a3b5bb;
+    --gold:#c9a227;
+    --gold-soft:#8c7a3d;
+    --line:rgba(237,230,216,.14);
+    --display:'Amiri','Times New Roman',serif;
+    --body:'Cairo','Segoe UI',Tahoma,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ground);color:var(--paper);font-family:var(--body);line-height:1.8;margin:0}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.3;text-wrap:balance}
+  .wrap{
+    max-width:1080px;margin:0 auto;
+    padding-left:max(16px,env(safe-area-inset-left,0px));
+    padding-right:max(16px,env(safe-area-inset-right,0px));
+  }
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+  header{
+    position:sticky;top:env(safe-area-inset-top,0px);z-index:10;
+    background:rgba(15,31,39,.92);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+  .brand{font-family:var(--display);font-size:1.3rem;font-weight:700}
+  .links{display:none;gap:26px;color:var(--muted);font-size:.95rem}
+  .links a:hover{color:var(--gold)}
+  .btn{
+    display:inline-block;padding:12px 26px;border-radius:2px;font-weight:600;font-size:1rem;
+    transition:background .2s,color .2s,border-color .2s;white-space:nowrap;cursor:pointer;font-family:var(--body);
+  }
+  .btn-gold{background:var(--gold);color:#10222b;border:1px solid var(--gold)}
+  .btn-gold:hover{background:#dab233}
+  .btn-line{border:1px solid var(--muted);color:var(--paper);background:transparent}
+  .btn-line:hover{border-color:var(--gold);color:var(--gold)}
+  .nav-cta{padding:8px 20px;font-size:.9rem}
+  @media(min-width:780px){.links{display:flex}}
+
+  .hero{padding-block:64px 56px;border-bottom:1px solid var(--line)}
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:44px;align-items:center}
+  .hero-grid>*{min-width:0}
+  @media(min-width:800px){.hero-grid{grid-template-columns:1.25fr .9fr}}
+  .eyebrow{color:var(--gold);margin-bottom:14px}
+  .hero h1{font-size:clamp(2.5rem,7vw,4.2rem);margin-bottom:12px}
+  .lead{color:var(--muted);font-size:clamp(1.05rem,2.4vw,1.3rem);max-width:34rem;margin-bottom:30px}
+  .actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:40px}
+  .ecg{width:100%;max-width:560px;height:auto}
+  .ecg path{
+    fill:none;stroke:var(--gold);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;
+    stroke-dasharray:1400;stroke-dashoffset:0;animation:trace 2.4s ease-out;
+  }
+  @keyframes trace{from{stroke-dashoffset:1400}to{stroke-dashoffset:0}}
+  @media(prefers-reduced-motion:reduce){.ecg path{animation:none}}
+  .portrait{max-width:340px;width:100%;margin:0 auto}
+  @media(min-width:800px){.portrait{margin:0}}
+  .portrait img{
+    width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;
+    border:1px solid var(--gold-soft);outline:1px solid var(--line);outline-offset:10px;
+  }
+
+  section{padding-block:68px}
+  .head{max-width:38rem;margin-bottom:36px}
+  .head h2{font-size:clamp(1.7rem,3.6vw,2.3rem);margin-bottom:10px}
+  .head p{color:var(--muted)}
+
+  #about{background:var(--panel);border-bottom:1px solid var(--line)}
+  .about-grid{display:grid;grid-template-columns:1fr;gap:40px}
+  .about-grid>*{min-width:0}
+  @media(min-width:780px){.about-grid{grid-template-columns:1.3fr 1fr}}
+  .about-text p{color:var(--muted);max-width:34rem;margin-bottom:16px}
+  .about-text p:first-of-type{color:var(--paper)}
+  .creds{list-style:none;border-top:1px solid var(--line)}
+  .creds li{padding:14px 0;border-bottom:1px solid var(--line);color:var(--muted);font-size:.96rem}
+  .creds strong{display:block;color:var(--paper);font-family:var(--display);font-size:1.1rem}
+
+  .svc{border-top:1px solid var(--line)}
+  .svc-row{display:flex;gap:18px;padding:24px 0;border-bottom:1px solid var(--line)}
+  .dot{flex:0 0 auto;width:8px;height:8px;border-radius:50%;background:var(--gold);margin-top:13px}
+  .svc-row h3{font-size:1.2rem;margin-bottom:4px}
+  .svc-row p{color:var(--muted);font-size:.96rem;max-width:36rem}
+
+  #clinic{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .mosaic{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+  .mosaic figure{position:relative;overflow:hidden;min-width:0}
+  .mosaic img{width:100%;height:100%;object-fit:cover}
+  .mosaic figcaption{
+    position:absolute;inset-inline:0;bottom:0;padding:22px 14px 10px;font-size:.85rem;
+    background:linear-gradient(to top,rgba(15,31,39,.9),rgba(15,31,39,0));
+  }
+  .m-big{grid-column:1/-1;aspect-ratio:16/9}
+  .m-a,.m-b{aspect-ratio:1/1}
+  .m-wide{grid-column:1/-1;aspect-ratio:3/1}
+  @media(min-width:780px){
+    .mosaic{grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:auto auto}
+    .m-big{grid-column:1;grid-row:1/3;aspect-ratio:auto}
+    .m-a,.m-b{aspect-ratio:1/1}
+    .m-wide{grid-column:2/4;aspect-ratio:auto;min-height:150px}
+  }
+
+  .contact-grid{display:grid;grid-template-columns:1fr;gap:36px}
+  .contact-grid>*{min-width:0}
+  @media(min-width:780px){.contact-grid{grid-template-columns:1fr 1fr}}
+  .item{margin-bottom:22px}
+  .label{color:var(--gold);font-size:.85rem;margin-bottom:4px}
+  .val{font-size:1.05rem;user-select:all}
+  .phone{font-size:1.4rem;font-weight:700;letter-spacing:.02em;direction:ltr;display:inline-block}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:8px}
+  .sign{border:1px solid var(--line)}
+  .sign img{width:100%;height:auto}
+  .sign p{padding:14px 16px;color:var(--muted);font-size:.92rem}
+
+  footer{padding-block:28px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="brand">د. بهاء القصاص</div>
+      <div class="links">
+        <a href="#about">نبذة</a>
+        <a href="#services">الخدمات</a>
+        <a href="#clinic">العيادة</a>
+        <a href="#contact">تواصل</a>
+      </div>
+      <a class="btn btn-gold nav-cta" href="https://link.gettap.co/bhaaelqassas" target="_blank" rel="noopener">احجز موعدك</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">معهد القلب القومي</div>
+      <h1>د. بهاء القصاص</h1>
+      <p class="lead">استشاري أمراض القلب والقسطرة القلبية. تشخيص دقيق ومتابعة مستمرة لصحة قلبك، في عيادة بالمعادي الجديدة.</p>
+      <div class="actions">
+        <a class="btn btn-gold" href="https://link.gettap.co/bhaaelqassas" target="_blank" rel="noopener">احجز موعدك الآن</a>
+        <a class="btn btn-line" href="https://wa.me/201555054025" target="_blank" rel="noopener">واتساب</a>
+      </div>
+      <svg class="ecg" viewBox="0 0 640 90" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="رسم تخطيط القلب">
+        <path d="M0,45 L120,45 L145,10 L170,80 L195,45 L230,45 L250,25 L270,45 L640,45"/>
+      </svg>
+    </div>
+    <div class="portrait">
+      <img src="assets/doctor.jpg" alt="د. بهاء القصاص، استشاري أمراض القلب">
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-text">
+      <h2 style="font-size:clamp(1.7rem,3.6vw,2.2rem);margin-bottom:18px">نبذة عن الدكتور</h2>
+      <p>د. بهاء محمد عبد المجيد القصاص، استشاري أمراض القلب والقسطرة القلبية بمعهد القلب القومي، حاصل على الدكتوراه في أمراض القلب، ويستقبل مرضاه في عيادات الشرق التخصصي بالمعادي الجديدة.</p>
+      <p>يجمع بين الخبرة في أحد أكبر مراكز القلب في مصر والمتابعة القريبة لكل حالة، من أول التشخيص حتى الاستقرار.</p>
+    </div>
+    <ul class="creds">
+      <li><strong>استشاري أمراض القلب والقسطرة القلبية</strong>معهد القلب القومي</li>
+      <li><strong>دكتوراه أمراض القلب</strong></li>
+      <li><strong>عيادات الشرق التخصصي</strong>المعادي الجديدة، القاهرة</li>
+    </ul>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head">
+      <h2>الخدمات</h2>
+      <p>فحوصات وعلاج ومتابعة لأمراض القلب والشرايين.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-row"><span class="dot"></span><div><h3>القسطرة القلبية التشخيصية والعلاجية</h3><p>تصوير الشرايين التاجية وعلاج الانسدادات.</p></div></div>
+      <div class="svc-row"><span class="dot"></span><div><h3>تخطيط القلب الكهربائي (ECG)</h3><p>فحص سريع لكشف اضطرابات ضربات القلب.</p></div></div>
+      <div class="svc-row"><span class="dot"></span><div><h3>إيكو على القلب</h3><p>تقييم عضلة القلب والصمامات بالموجات فوق الصوتية.</p></div></div>
+      <div class="svc-row"><span class="dot"></span><div><h3>هولتر القلب لمدة 48 ساعة</h3><p>تسجيل مستمر لنشاط القلب لكشف اضطرابات النظم التي لا تظهر في التخطيط العادي.</p></div></div>
+      <div class="svc-row"><span class="dot"></span><div><h3>متابعة الضغط والكوليسترول</h3><p>خطط علاج ووقاية لتقليل مخاطر أمراض القلب.</p></div></div>
+      <div class="svc-row"><span class="dot"></span><div><h3>متابعة مرضى القلب المزمنين</h3><p>متابعة دورية لضبط الحالة على المدى الطويل.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="clinic">
+  <div class="wrap">
+    <div class="head">
+      <h2>داخل العيادة</h2>
+      <p>عيادات الشرق التخصصي، مجهزة لراحتك من لحظة الاستقبال.</p>
+    </div>
+    <div class="mosaic">
+      <figure class="m-big"><img src="assets/reception.jpg" alt="استقبال عيادات الشرق التخصصي" loading="lazy"><figcaption>الاستقبال</figcaption></figure>
+      <figure class="m-a"><img src="assets/waiting-area.jpg" alt="صالة انتظار المرضى" loading="lazy"><figcaption>صالة الانتظار</figcaption></figure>
+      <figure class="m-b"><img src="assets/consultation-room.jpg" alt="غرفة الكشف" loading="lazy"><figcaption>غرفة الكشف</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="head" style="margin-bottom:24px">
+        <h2>تواصل معنا</h2>
+        <p>احجز موعدك أو اتصل بالعيادة لأي استفسار.</p>
+      </div>
+      <div class="item">
+        <div class="label">العنوان</div>
+        <div class="val">عيادات الشرق التخصصي، المعادي الجديدة، شارع النصر، تقسيم اللاسلكي، خلف بنزينة توتال، أعلى صيدلية د. ندى منير، القاهرة 11728</div>
+      </div>
+      <div class="item">
+        <div class="label">تليفون / واتساب</div>
+        <a class="phone" id="phone" href="tel:01555054025">01555054025</a>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-gold" href="https://link.gettap.co/bhaaelqassas" target="_blank" rel="noopener">احجز موعدك</a>
+        <a class="btn btn-line" href="https://wa.me/201555054025" target="_blank" rel="noopener">واتساب</a>
+        <a class="btn btn-line" href="https://maps.app.goo.gl/eGyToUVE8nR7HwjDA" target="_blank" rel="noopener">الموقع على الخريطة</a>
+        <button class="btn btn-line" type="button" id="copy">نسخ الرقم</button>
+      </div>
+    </div>
+    <div class="sign">
+      <img src="assets/clinic-sign.jpg" alt="لافتة عيادات الشرق التخصصي على المبنى" loading="lazy">
+      <p>مدخل المبنى، والعيادة أعلى صيدلية د. ندى منير.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; <span id="yr"></span> د. بهاء القصاص، استشاري أمراض القلب والقسطرة القلبية</div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Physician",
+  "name":"د. بهاء القصاص",
+  "medicalSpecialty":"Cardiovascular",
+  "description":"استشاري أمراض القلب والقسطرة القلبية بمعهد القلب القومي",
+  "telephone":"+201555054025",
+  "address":{"@type":"PostalAddress","streetAddress":"شارع النصر، تقسيم اللاسلكي، المعادي الجديدة","addressLocality":"القاهرة","postalCode":"11728","addressCountry":"EG"},
+  "worksFor":{"@type":"MedicalClinic","name":"عيادات الشرق التخصصي"}
+}
+</script>
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  var btn = document.getElementById('copy');
+  btn.addEventListener('click', function(){
+    var num = '01555054025';
+    var done = function(){ btn.textContent = 'تم النسخ'; setTimeout(function(){ btn.textContent = 'نسخ الرقم'; }, 1800); };
+    var fallback = function(){
+      var r = document.createRange(); r.selectNodeContents(document.getElementById('phone'));
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'حدد الرقم وانسخه'; setTimeout(function(){ btn.textContent = 'نسخ الرقم'; }, 2500);
+    };
+    try { navigator.clipboard.writeText(num).then(done, fallback); } catch(e){ fallback(); }
+  });
+</script>
+
+</body>
+</html>
