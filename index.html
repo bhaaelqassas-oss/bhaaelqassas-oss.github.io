@@ -172,6 +172,19 @@
     .dock .btn{padding:13px 8px;text-align:center;font-size:1rem}
   }
 
+  #follow{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .fl-grid{display:grid;grid-template-columns:1fr;gap:12px}
+  @media(min-width:640px){.fl-grid{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}}
+  .fl{display:flex;align-items:center;gap:14px;padding:16px 18px;border:1px solid var(--line);border-inline-start:3px solid var(--gold-soft);background:var(--ground);transition:border-color .2s,background .2s,transform .2s}
+  .fl:hover{border-color:var(--gold);background:rgba(201,162,39,.08)}
+  .fl-i{flex:0 0 auto;width:44px;height:44px;border-radius:50%;border:1px solid var(--gold-soft);display:grid;place-items:center;color:var(--gold)}
+  .fl-i svg{width:24px;height:24px}
+  .fl-t{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.5}
+  .fl-t strong{font-family:var(--display);font-size:1.15rem}
+  .fl-t span{color:var(--muted);font-size:.85rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .fl-go{color:var(--gold);font-size:1.2rem}
+  .fl:hover .fl-go{transform:translateX(-4px)}
+
   footer{padding-block:28px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.85rem}
 </style>
 </head>
@@ -186,6 +199,7 @@
         <a href="#services">الخدمات</a>
         <a href="#clinic">العيادة</a>
         <a class="link-reviews" href="#reviews">★ آراء المرضى</a>
+        <a href="#follow">تابعنا</a>
         <a href="#contact">تواصل</a>
       </div>
       <a class="btn btn-gold nav-cta" href="https://link.gettap.co/bhaaelqassas" target="_blank" rel="noopener">احجز موعدك</a>
@@ -316,6 +330,20 @@
   </div>
 </section>
 
+<section id="follow">
+  <div class="wrap">
+    <div class="head">
+      <h2>تابعنا</h2>
+      <p>نصائح قلبية مبسطة وفيديوهات توعية بشكل مستمر على صفحات الدكتور.</p>
+    </div>
+    <div class="fl-grid">
+<a class="fl" href="https://www.facebook.com/1353697501156643" target="_blank" rel="noopener me"><span class="fl-i"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M13.2 19v-6.2h2.1l.4-2.5h-2.5V8.9c0-.8.3-1.3 1.4-1.3h1.2V5.4c-.4 0-1.1-.1-2-.1-2 0-3.3 1.2-3.3 3.4v1.6H8.4v2.5h2.1V19" fill="currentColor"/></svg></span><span class="fl-t"><strong>فيسبوك</strong><span dir="auto">Dr. Bahaa AL Qassas - عيادة القلب</span></span><span class="fl-go" aria-hidden="true">&larr;</span></a>
+<a class="fl" href="https://www.instagram.com/bahaa_elqassas/" target="_blank" rel="noopener me"><span class="fl-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.8" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></span><span class="fl-t"><strong>انستجرام</strong><span dir="auto">@bahaa_elqassas</span></span><span class="fl-go" aria-hidden="true">&larr;</span></a>
+<a class="fl" href="https://www.tiktok.com/@bhaarefaay" target="_blank" rel="noopener me"><span class="fl-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4v10.2a3.3 3.3 0 1 1-3.3-3.3M14 4c.3 2.3 1.9 3.9 4.2 4.1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="fl-t"><strong>تيك توك</strong><span dir="auto">@bhaarefaay</span></span><span class="fl-go" aria-hidden="true">&larr;</span></a>
+    </div>
+  </div>
+</section>
+
 <section id="contact">
   <div class="wrap contact-grid">
     <div>
@@ -364,6 +392,7 @@
   "description":"استشاري أمراض القلب والقسطرة القلبية بمعهد القلب القومي",
   "telephone":"+201555054025",
   "address":{"@type":"PostalAddress","streetAddress":"شارع النصر، تقسيم اللاسلكي، المعادي الجديدة","addressLocality":"القاهرة","postalCode":"11728","addressCountry":"EG"},
+  "sameAs":["https://www.facebook.com/1353697501156643","https://www.instagram.com/bahaa_elqassas/","https://www.tiktok.com/@bhaarefaay"],
   "worksFor":{"@type":"MedicalClinic","name":"عيادات الشرق التخصصي"}
 }
 </script>
