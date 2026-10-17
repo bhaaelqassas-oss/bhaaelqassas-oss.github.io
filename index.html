@@ -185,6 +185,11 @@
     .dock .btn{padding:13px 8px;font-size:1rem}
   }
 
+  .nav-end{display:flex;align-items:center;gap:10px}
+  .lang{font-family:var(--body);font-weight:800;font-size:.9rem;color:#fff;background:transparent;border:1.5px solid rgba(255,255,255,.4);border-radius:999px;padding:6px 14px;cursor:pointer;transition:background .2s,color .2s}
+  .lang:hover{background:#fff;color:var(--navy)}
+  html[dir=ltr] .rv blockquote:not([dir=ltr]){direction:rtl;text-align:right}
+
   footer{padding-block:28px;background:var(--navy);text-align:center;color:var(--muted-d);font-size:.85rem}
 </style>
 </head>
@@ -219,7 +224,10 @@
         <a href="#follow">تابعنا</a>
         <a href="#contact">تواصل</a>
       </div>
-      <a class="btn btn-gold nav-cta" href="https://wa.me/201555054025?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A8%D9%87%D8%A7%D8%A1%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B9%D9%8A%D8%A7%D8%AF%D8%A9." target="_blank" rel="noopener">احجز موعدك</a>
+      <div class="nav-end">
+        <button class="lang" id="lang" type="button" aria-label="Switch to English">EN</button>
+        <a class="btn btn-gold nav-cta" href="https://wa.me/201555054025?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A8%D9%87%D8%A7%D8%A1%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B9%D9%8A%D8%A7%D8%AF%D8%A9." target="_blank" rel="noopener">احجز موعدك</a>
+      </div>
     </nav>
   </div>
 </header>
@@ -422,18 +430,52 @@
 }
 </script>
 <script>
+(function(){
   document.getElementById('yr').textContent = new Date().getFullYear();
-  var btn = document.getElementById('copy');
+  var T={"د. بهاء القصاص": "Dr. Bahaa El-Qassas", "نبذة": "About", "الخدمات": "Services", "العيادة": "Clinic", "★ آراء المرضى": "★ Reviews", "تابعنا": "Follow", "تواصل": "Contact", "احجز موعدك": "Book now", "معهد القلب القومي": "National Heart Institute", "استشاري أمراض القلب والقسطرة القلبية. تشخيص دقيق ومتابعة مستمرة لصحة قلبك، في عيادة بالمعادي الجديدة.": "Consultant of Cardiology and Cardiac Catheterization. Accurate diagnosis and continuous follow-up for your heart health, at a clinic in New Maadi.", "احجز موعدك الآن": "Book your appointment", "آراء المرضى": "Patient reviews", "استشاري قلب وقسطرة": "Cardiology & catheterization consultant", "+٨٠ تقييم بخمس نجوم": "80+ five-star reviews", "من مرضى العيادة": "From the clinic's patients", "المعادي الجديدة": "New Maadi", "عيادات الشرق التخصصي": "Al-Sharq Specialized Clinics", "نبذة عن الدكتور": "About the doctor", "د. بهاء محمد عبد المجيد القصاص، استشاري أمراض القلب والقسطرة القلبية بمعهد القلب القومي، حاصل على الدكتوراه في أمراض القلب، ويستقبل مرضاه في عيادات الشرق التخصصي بالمعادي الجديدة.": "Dr. Bahaa Mohamed Abdel Meguid El-Qassas is a consultant of cardiology and cardiac catheterization at the National Heart Institute, holds a PhD in cardiology, and sees patients at Al-Sharq Specialized Clinics in New Maadi.", "يجمع بين الخبرة في أحد أكبر مراكز القلب في مصر والمتابعة القريبة لكل حالة، من أول التشخيص حتى الاستقرار.": "He combines experience at one of Egypt's largest heart centers with close follow-up of every case, from diagnosis to stabilization.", "استشاري أمراض القلب والقسطرة القلبية": "Consultant of Cardiology and Cardiac Catheterization", "دكتوراه أمراض القلب": "PhD in Cardiology", "المعادي الجديدة، القاهرة": "New Maadi, Cairo", "فحوصات وعلاج ومتابعة لأمراض القلب والشرايين.": "Tests, treatment and follow-up for heart and vascular diseases.", "القسطرة القلبية التشخيصية والعلاجية": "Diagnostic and therapeutic cardiac catheterization", "تصوير الشرايين التاجية وعلاج الانسدادات.": "Coronary angiography and treatment of blockages.", "تخطيط القلب الكهربائي (ECG)": "Electrocardiogram (ECG)", "فحص سريع لكشف اضطرابات ضربات القلب.": "A quick test to detect heart rhythm disorders.", "إيكو على القلب": "Echocardiography", "تقييم عضلة القلب والصمامات بالموجات فوق الصوتية.": "Ultrasound assessment of the heart muscle and valves.", "هولتر القلب لمدة 48 ساعة": "48-hour Holter monitoring", "تسجيل مستمر لنشاط القلب لكشف اضطرابات النظم التي لا تظهر في التخطيط العادي.": "Continuous heart recording to detect rhythm disorders that a routine ECG can miss.", "متابعة الضغط والكوليسترول": "Blood pressure and cholesterol management", "خطط علاج ووقاية لتقليل مخاطر أمراض القلب.": "Treatment and prevention plans to reduce heart disease risk.", "متابعة مرضى القلب المزمنين": "Chronic heart patient follow-up", "متابعة دورية لضبط الحالة على المدى الطويل.": "Regular follow-up to keep the condition under control over the long term.", "داخل العيادة": "Inside the clinic", "عيادات الشرق التخصصي، مجهزة لراحتك من لحظة الاستقبال.": "Al-Sharq Specialized Clinics, designed for your comfort from the moment you arrive.", "الاستقبال": "Reception", "صالة الانتظار": "Waiting area", "غرفة الكشف": "Consultation room", "آراء وتقييمات المرضى": "Patient reviews and ratings", "كلمات مرضى زاروا العيادة، منقولة كما كتبوها بدون أي تعديل.": "Words from patients who visited the clinic, shown exactly as they wrote them (mostly in Arabic).", "+٨٠": "80+", "تقييم بخمس نجوم من مرضى العيادة": "five-star reviews from clinic patients", "عرض باقي التقييمات": "Show more reviews", "إخفاء التقييمات": "Hide reviews", "نصائح قلبية مبسطة وفيديوهات توعية بشكل مستمر على صفحات الدكتور.": "Simple heart-health tips and awareness videos, posted regularly on the doctor's pages.", "فيسبوك": "Facebook", "Dr. Bahaa AL Qassas - عيادة القلب": "Dr. Bahaa AL Qassas - Heart Clinic", "انستجرام": "Instagram", "تيك توك": "TikTok", "يوتيوب": "YouTube", "فيزيتا": "Vezeeta", "احجز من فيزيتا": "Book on Vezeeta", "تواصل معنا": "Contact us", "احجز موعدك أو اتصل بالعيادة لأي استفسار.": "Book an appointment or call the clinic with any question.", "العنوان": "Address", "عيادات الشرق التخصصي، المعادي الجديدة، شارع النصر، تقسيم اللاسلكي، خلف بنزينة توتال، أعلى صيدلية د. ندى منير، القاهرة 11728": "Al-Sharq Specialized Clinics, New Maadi, Al-Nasr Street, Wireless District (Taqseem El-Laselky), behind the Total gas station, above Dr. Nada Mounir Pharmacy, Cairo 11728", "تليفون / واتساب": "Phone / WhatsApp", "الموقع على الخريطة": "View on map", "مدخل المبنى، والعيادة أعلى صيدلية د. ندى منير.": "Building entrance. The clinic is above Dr. Nada Mounir Pharmacy.", "د. بهاء القصاص، استشاري أمراض القلب والقسطرة القلبية": "Dr. Bahaa El-Qassas, Consultant of Cardiology and Cardiac Catheterization"}, ALT={"د. بهاء القصاص، استشاري أمراض القلب": "Dr. Bahaa El-Qassas, cardiology consultant", "استقبال عيادات الشرق التخصصي": "Reception at Al-Sharq Specialized Clinics", "صالة انتظار المرضى": "Patient waiting area", "غرفة الكشف": "Consultation room", "لافتة عيادات الشرق التخصصي على المبنى": "Al-Sharq Specialized Clinics sign on the building", "رسم تخطيط القلب": "Electrocardiogram trace"}, M={"title_en": "Dr. Bahaa El-Qassas | Consultant of Cardiology & Cardiac Catheterization - Maadi, Cairo", "desc_en": "Dr. Bahaa El-Qassas, consultant of cardiology and cardiac catheterization at the National Heart Institute. Clinic in New Maadi, Cairo. Book your appointment now.", "wa": {"ar": "السلام عليكم دكتور بهاء، عايز أحجز موعد في العيادة.", "en": "Hello Dr. Bahaa, I would like to book an appointment at the clinic."}, "copy": {"ar": ["نسخ الرقم", "تم النسخ", "حدد الرقم وانسخه"], "en": ["Copy number", "Copied", "Select and copy the number"]}};
+  var lang='ar';
+  var btn=document.getElementById('copy'), langBtn=document.getElementById('lang');
+  var items=[], attrs=[];
+  var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT), n;
+  while((n=w.nextNode())){
+    var pe=n.parentElement; if(!pe||pe.closest('script,style,.rv,#copy')) continue;
+    var t=n.nodeValue.trim(); if(T[t]){ items.push({n:n,ar:n.nodeValue,en:n.nodeValue.replace(t,function(){return T[t];})}); }
+  }
+  document.querySelectorAll('img[alt],svg[aria-label]').forEach(function(e){
+    var a=e.getAttribute('alt')!==null?'alt':'aria-label', v=e.getAttribute(a);
+    if(ALT[v]) attrs.push({e:e,a:a,ar:v,en:ALT[v]});
+  });
+  var titleAr=document.title, descEl=document.querySelector('meta[name=description]'), descAr=descEl?descEl.getAttribute('content'):'';
+  function copyLabels(){return M.copy[lang];}
+  function setLang(l){
+    lang=l;
+    document.documentElement.lang=l; document.documentElement.dir=(l==='en'?'ltr':'rtl');
+    items.forEach(function(i){i.n.nodeValue=(l==='en'?i.en:i.ar);});
+    attrs.forEach(function(x){x.e.setAttribute(x.a,l==='en'?x.en:x.ar);});
+    document.title=(l==='en'?M.title_en:titleAr);
+    if(descEl) descEl.setAttribute('content',l==='en'?M.desc_en:descAr);
+    document.querySelectorAll('a[href^="https://wa.me/201555054025"]').forEach(function(a){a.href='https://wa.me/201555054025?text='+encodeURIComponent(M.wa[l]);});
+    btn.textContent=copyLabels()[0];
+    langBtn.textContent=(l==='en'?'\u0639\u0631\u0628\u064a':'EN');
+    langBtn.setAttribute('aria-label',l==='en'?'التبديل إلى العربية':'Switch to English');
+    try{localStorage.setItem('lang',l);}catch(e){}
+  }
+  langBtn.addEventListener('click',function(){setLang(lang==='en'?'ar':'en');});
   btn.addEventListener('click', function(){
-    var num = '01555054025';
-    var done = function(){ btn.textContent = 'تم النسخ'; setTimeout(function(){ btn.textContent = 'نسخ الرقم'; }, 1800); };
-    var fallback = function(){
-      var r = document.createRange(); r.selectNodeContents(document.getElementById('phone'));
-      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
-      btn.textContent = 'حدد الرقم وانسخه'; setTimeout(function(){ btn.textContent = 'نسخ الرقم'; }, 2500);
+    var num='01555054025', L=copyLabels();
+    var done=function(){ btn.textContent=L[1]; setTimeout(function(){ btn.textContent=copyLabels()[0]; }, 1800); };
+    var fallback=function(){
+      var r=document.createRange(); r.selectNodeContents(document.getElementById('phone'));
+      var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent=L[2]; setTimeout(function(){ btn.textContent=copyLabels()[0]; }, 2500);
     };
     try { navigator.clipboard.writeText(num).then(done, fallback); } catch(e){ fallback(); }
   });
+  var q=/[?&]lang=(en|ar)/.exec(location.search), stored=null;
+  try{stored=localStorage.getItem('lang');}catch(e){}
+  var start=q?q[1]:(stored==='en'?'en':'ar');
+  if(start==='en') setLang('en');
+})();
 </script>
 
 </body>
