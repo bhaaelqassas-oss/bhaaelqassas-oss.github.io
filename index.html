@@ -10,105 +10,110 @@
 <meta property="og:description" content="عيادات الشرق التخصصي، المعادي الجديدة. تشخيص ومتابعة وعلاج أمراض القلب.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-  /* Layout: dark teal ground, gold used only for action and the ECG trace; doctor portrait beside the headline, clinic photos as a mosaic. */
+  /* Navy + red theme matching the clinic's social identity. Navy hero and follow band, light sections between, red used for the booking action. */
   :root{
-    color-scheme:dark;
-    --ground:#0f1f27;
-    --panel:#142b36;
-    --paper:#ede6d8;
-    --muted:#a3b5bb;
-    --gold:#c9a227;
-    --gold-soft:#8c7a3d;
-    --line:rgba(237,230,216,.14);
-    --display:'Amiri','Times New Roman',serif;
+    color-scheme:light;
+    --navy:#0A2342; --navy2:#123A66; --blue:#1E5AA8;
+    --red:#F02652; --red-d:#D91B45;
+    --soft:#EAF1FA; --card:#F3F7FC; --ink:#0A2342;
+    --muted:#5B7391; --muted-d:#9FB4CF; --line:#DCE6F2;
+    --yellow:#FFC857; --star:#FFB400;
     --body:'Cairo','Segoe UI',Tahoma,sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background:var(--ground);color:var(--paper);font-family:var(--body);line-height:1.8;margin:0}
+  body{background:#fff;color:var(--ink);font-family:var(--body);line-height:1.8;margin:0}
   a{color:inherit;text-decoration:none}
   img{display:block;max-width:100%}
-  h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.3;text-wrap:balance}
-  .wrap{
-    max-width:1080px;margin:0 auto;
-    padding-left:max(16px,env(safe-area-inset-left,0px));
-    padding-right:max(16px,env(safe-area-inset-right,0px));
-  }
-  :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  h1,h2,h3{font-family:var(--body);font-weight:800;line-height:1.3;text-wrap:balance}
+  .wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+  :focus-visible{outline:3px solid var(--red);outline-offset:3px}
+  .ic{width:26px;height:26px;fill:currentColor;fill-opacity:.2;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 
-  header{
-    position:sticky;top:env(safe-area-inset-top,0px);z-index:10;
-    background:rgba(15,31,39,.92);backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--line);
-  }
-  nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
-  .brand{font-family:var(--display);font-size:1.3rem;font-weight:700}
-  .links{display:none;gap:26px;color:var(--muted);font-size:.95rem}
-  .links a:hover{color:var(--gold)}
-  .btn{
-    display:inline-block;padding:12px 26px;border-radius:2px;font-weight:600;font-size:1rem;
-    transition:background .2s,color .2s,border-color .2s;white-space:nowrap;cursor:pointer;font-family:var(--body);
-  }
-  .btn-gold{background:var(--gold);color:#10222b;border:1px solid var(--gold)}
-  .btn-gold:hover{background:#dab233}
-  .btn-line{border:1px solid var(--muted);color:var(--paper);background:transparent}
-  .btn-line:hover{border-color:var(--gold);color:var(--gold)}
-  .nav-cta{padding:8px 20px;font-size:.9rem}
+  header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(10,35,66,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
+  nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-size:1.25rem;font-weight:800;color:#fff}
+  .logo-mark{width:38px;height:38px;border-radius:11px;background:var(--red);color:#fff;display:grid;place-items:center}
+  .logo-mark .ic{width:22px;height:22px}
+  .links{display:none;gap:24px;color:var(--muted-d);font-size:.95rem;font-weight:600;align-items:center}
+  .links a:hover{color:#fff}
+  .links a.link-reviews{color:var(--yellow);border:1px solid rgba(255,200,87,.5);border-radius:999px;padding:2px 14px}
+  .links a.link-reviews:hover{background:var(--yellow);color:var(--navy)}
   @media(min-width:780px){.links{display:flex}}
 
-  .hero{padding-block:64px 56px;border-bottom:1px solid var(--line)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 26px;border-radius:999px;font-weight:800;font-size:1rem;transition:background .2s,color .2s,border-color .2s,transform .2s;white-space:nowrap;cursor:pointer;font-family:var(--body)}
+  .btn .ic{width:22px;height:22px}
+  .btn-gold{background:var(--red);color:#fff;border:1.5px solid var(--red)}
+  .btn-gold:hover{background:var(--red-d);border-color:var(--red-d)}
+  .btn-line{border:1.5px solid #B9CAE0;color:var(--navy);background:#fff}
+  .btn-line:hover{border-color:var(--red);color:var(--red)}
+  .btn-star{border:1.5px solid var(--yellow);color:var(--yellow);background:rgba(255,255,255,.08)}
+  .btn-star:hover{background:var(--yellow);color:var(--navy)}
+  .btn-lg{padding:16px 34px;font-size:1.12rem}
+  .btn-gold.btn-lg{box-shadow:0 10px 28px rgba(240,38,82,.4)}
+  .nav-cta{padding:9px 22px;font-size:.92rem}
+
+  .hero{position:relative;overflow:hidden;color:#fff;padding-block:68px 112px;background:radial-gradient(800px 520px at 24% 55%,#1E5AA8 0%,#123A66 48%,#0A2342 100%)}
   .hero-grid{display:grid;grid-template-columns:1fr;gap:44px;align-items:center}
   .hero-grid>*{min-width:0}
   @media(min-width:800px){.hero-grid{grid-template-columns:1.25fr .9fr}}
-  .eyebrow{color:var(--gold);margin-bottom:14px}
-  .hero h1{font-size:clamp(2.5rem,7vw,4.2rem);margin-bottom:12px}
-  .lead{color:var(--muted);font-size:clamp(1.05rem,2.4vw,1.3rem);max-width:34rem;margin-bottom:30px}
-  .actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:40px}
-  .ecg{width:100%;max-width:560px;height:auto}
-  .ecg path{
-    fill:none;stroke:var(--gold);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;
-    stroke-dasharray:1400;stroke-dashoffset:0;animation:trace 2.4s ease-out;
-  }
+  .eyebrow{display:inline-block;background:rgba(240,38,82,.16);border:1px solid rgba(240,38,82,.55);color:#FF9DB2;padding:4px 16px;border-radius:999px;font-weight:700;font-size:.9rem;margin-bottom:16px}
+  .hero h1{font-size:clamp(2.7rem,8vw,5.3rem);font-weight:900;line-height:1.05;margin-bottom:14px;color:#fff}
+  .lead{color:#CFE0F5;font-size:clamp(1.05rem,2.4vw,1.3rem);max-width:34rem;margin-bottom:30px}
+  .actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:36px}
+  .hero .btn-line{border-color:rgba(255,255,255,.4);color:#fff;background:rgba(255,255,255,.08)}
+  .hero .btn-line:hover{border-color:#fff;color:#fff;background:rgba(255,255,255,.18)}
+  .ecg{width:100%;max-width:520px;height:auto}
+  .ecg path{fill:none;stroke:#FF5C7C;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1400;stroke-dashoffset:0;animation:trace 2.4s ease-out}
   @keyframes trace{from{stroke-dashoffset:1400}to{stroke-dashoffset:0}}
   @media(prefers-reduced-motion:reduce){.ecg path{animation:none}}
-  .portrait{max-width:340px;width:100%;margin:0 auto}
+  .portrait{position:relative;max-width:340px;width:100%;margin:0 auto}
   @media(min-width:800px){.portrait{margin:0}}
-  .portrait img{
-    width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;
-    border:1px solid var(--gold-soft);outline:1px solid var(--line);outline-offset:10px;
-  }
+  .hero-heart{position:absolute;width:150%;right:-25%;top:-14%;z-index:0;fill:none;stroke:rgba(255,120,150,.4);stroke-width:.2;pointer-events:none}
+  .portrait img{position:relative;z-index:1;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:200px 200px 24px 24px;border:3px solid rgba(255,255,255,.25)}
 
-  section{padding-block:68px}
-  .head{max-width:38rem;margin-bottom:36px}
-  .head h2{font-size:clamp(1.7rem,3.6vw,2.3rem);margin-bottom:10px}
+  .trust{margin-top:-56px;position:relative;z-index:2}
+  .trust-card{background:#fff;border-radius:24px;box-shadow:0 16px 40px rgba(10,35,66,.18);padding:22px 26px;display:grid;grid-template-columns:1fr;gap:18px}
+  @media(min-width:780px){.trust-card{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}}
+  .tr{display:flex;align-items:center;gap:14px}
+  .tr-i{flex:0 0 auto;width:52px;height:52px;border-radius:50%;display:grid;place-items:center}
+  .tr-i.r{background:#FFE6EC;color:var(--red)} .tr-i.y{background:#FFF2D1;color:#E09B00} .tr-i.b{background:#E3EDFA;color:var(--blue)}
+  .tr strong{display:block;font-weight:800;font-size:1.05rem;line-height:1.4}
+  .tr span.s{color:var(--muted);font-size:.9rem}
+
+  section{padding-block:72px}
+  .head{max-width:38rem;margin-bottom:34px}
+  .head h2{font-size:clamp(1.8rem,4vw,2.4rem);font-weight:900;margin-bottom:8px}
+  .head h2::before{content:"";display:inline-block;width:8px;height:.9em;border-radius:4px;background:var(--red);margin-inline-end:12px;vertical-align:-.1em}
   .head p{color:var(--muted)}
 
-  #about{background:var(--panel);border-bottom:1px solid var(--line)}
+  #about{background:var(--card);margin-top:-40px;padding-top:112px}
   .about-grid{display:grid;grid-template-columns:1fr;gap:40px}
   .about-grid>*{min-width:0}
   @media(min-width:780px){.about-grid{grid-template-columns:1.3fr 1fr}}
+  .about-text h2{font-weight:900}
   .about-text p{color:var(--muted);max-width:34rem;margin-bottom:16px}
-  .about-text p:first-of-type{color:var(--paper)}
+  .about-text p:first-of-type{color:var(--ink)}
   .creds{list-style:none;border-top:1px solid var(--line)}
   .creds li{padding:14px 0;border-bottom:1px solid var(--line);color:var(--muted);font-size:.96rem}
-  .creds strong{display:block;color:var(--paper);font-family:var(--display);font-size:1.1rem}
+  .creds strong{display:block;color:var(--ink);font-weight:800;font-size:1.05rem}
 
-  .svc{border-top:1px solid var(--line)}
-  .svc-row{display:flex;gap:18px;padding:24px 0;border-bottom:1px solid var(--line)}
-  .dot{flex:0 0 auto;width:8px;height:8px;border-radius:50%;background:var(--gold);margin-top:13px}
-  .svc-row h3{font-size:1.2rem;margin-bottom:4px}
-  .svc-row p{color:var(--muted);font-size:.96rem;max-width:36rem}
+  .svc{display:grid;grid-template-columns:1fr;gap:18px}
+  @media(min-width:640px){.svc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(min-width:980px){.svc{grid-template-columns:repeat(3,minmax(0,1fr))}}
+  .svc-row{display:flex;flex-direction:column;gap:12px;background:var(--card);border-radius:22px;padding:26px}
+  .svc-i{width:60px;height:60px;border-radius:18px;background:linear-gradient(135deg,#123A66,#1E5AA8);color:#fff;display:grid;place-items:center}
+  .svc-i .ic{width:30px;height:30px}
+  .svc-row h3{font-size:1.15rem;margin-bottom:2px}
+  .svc-row p{color:var(--muted);font-size:.95rem}
 
-  #clinic{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .mosaic{display:grid;grid-template-columns:1fr 1fr;gap:6px}
-  .mosaic figure{position:relative;overflow:hidden;min-width:0}
+  #clinic{background:var(--soft)}
+  .mosaic{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .mosaic figure{position:relative;overflow:hidden;min-width:0;border-radius:16px}
   .mosaic img{width:100%;height:100%;object-fit:cover}
-  .mosaic figcaption{
-    position:absolute;inset-inline:0;bottom:0;padding:22px 14px 10px;font-size:.85rem;
-    background:linear-gradient(to top,rgba(15,31,39,.9),rgba(15,31,39,0));
-  }
+  .mosaic figcaption{position:absolute;inset-inline:0;bottom:0;padding:22px 14px 10px;font-size:.85rem;font-weight:600;color:#fff;background:linear-gradient(to top,rgba(10,35,66,.9),rgba(10,35,66,0))}
   .m-big{grid-column:1/-1;aspect-ratio:16/9}
   .m-a,.m-b{aspect-ratio:1/1}
   .m-wide{grid-column:1/-1;aspect-ratio:3/1}
@@ -119,38 +124,26 @@
     .m-wide{grid-column:2/4;aspect-ratio:auto;min-height:150px}
   }
 
-  .contact-grid{display:grid;grid-template-columns:1fr;gap:36px}
-  .contact-grid>*{min-width:0}
-  @media(min-width:780px){.contact-grid{grid-template-columns:1fr 1fr}}
-  .item{margin-bottom:22px}
-  .label{color:var(--gold);font-size:.85rem;margin-bottom:4px}
-  .val{font-size:1.05rem;user-select:all}
-  .phone{font-size:1.4rem;font-weight:700;letter-spacing:.02em;direction:ltr;display:inline-block}
-  .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:8px}
-  .sign{border:1px solid var(--line)}
-  .sign img{width:100%;height:auto}
-  .sign p{padding:14px 16px;color:var(--muted);font-size:.92rem}
-
-  #reviews{border-top:1px solid var(--line)}
-  .rv-stat{display:flex;align-items:center;gap:18px;margin-bottom:34px;padding:18px 22px;border:1px solid var(--line);border-inline-start:3px solid var(--gold);background:var(--panel);width:fit-content;max-width:100%}
-  .rv-stat strong{display:block;font-family:var(--display);font-size:2.4rem;line-height:1;color:var(--gold);direction:ltr;text-align:right}
+  #reviews{background:#fff}
+  .rv-stat{display:flex;align-items:center;gap:16px;margin-bottom:30px;padding:12px 24px;background:var(--card);border-radius:999px;width:fit-content;max-width:100%}
+  .rv-stat strong{display:block;font-weight:900;font-size:1.9rem;line-height:1;color:var(--navy);direction:ltr}
   .rv-stat span:not(.st){color:var(--muted);font-size:.95rem}
-  .st{color:var(--gold);letter-spacing:2px;direction:ltr;display:inline-block;font-size:.95rem}
+  .st{color:var(--star);letter-spacing:2px;direction:ltr;display:inline-block;font-size:.95rem}
   .st.big{font-size:1.15rem}
   .rv-grid{column-count:1;column-gap:16px}
   @media(min-width:700px){.rv-grid{column-count:2}}
   @media(min-width:1000px){.rv-grid{column-count:3}}
-  .rv{break-inside:avoid;margin:0 0 16px;padding:20px 22px 18px;background:var(--panel);border:1px solid var(--line);border-top:2px solid var(--gold-soft);position:relative}
-  .rv.feat{border-top-color:var(--gold)}
+  .rv{break-inside:avoid;margin:0 0 16px;padding:22px 24px 18px;background:var(--card);border-radius:22px;border:1px solid #E3EAF3}
+  .rv.feat{background:#fff;border-color:#E3EAF3;box-shadow:0 10px 28px rgba(10,35,66,.1);border-top:3px solid var(--red)}
   .rv-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
   .rv-date{color:var(--muted);font-size:.8rem}
-  .rv .q{display:block;font-family:var(--display);font-size:3.2rem;line-height:.9;height:26px;margin-top:10px;color:var(--gold);opacity:.55}
-  .rv blockquote{font-size:1.02rem;line-height:1.95;color:var(--paper);margin:0}
+  .rv .q{display:block;font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:4rem;line-height:.9;height:30px;margin-top:10px;color:var(--red)}
+  .rv blockquote{font-size:1.02rem;line-height:1.95;color:var(--ink);margin:0}
   .rv.feat blockquote{font-size:1.08rem}
   .rv blockquote[dir=ltr]{text-align:left}
-  .rv-who{display:flex;align-items:center;gap:11px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
-  .av{flex:0 0 auto;width:36px;height:36px;border-radius:50%;border:1px solid var(--gold-soft);display:grid;place-items:center;font-family:var(--display);font-size:1.15rem;line-height:1;color:var(--gold);background:var(--ground)}
-  .nm{font-size:.92rem;font-weight:600;unicode-bidi:isolate}
+  .rv-who{display:flex;align-items:center;gap:11px;margin-top:16px;padding-top:14px;border-top:1px solid #E3EAF3}
+  .av{flex:0 0 auto;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:1rem;line-height:1;color:#fff;background:var(--navy)}
+  .nm{font-size:.92rem;font-weight:700;unicode-bidi:isolate}
   .rv-more{margin-top:8px}
   .rv-more summary{display:block;width:fit-content;margin:8px auto 28px;list-style:none;text-align:center}
   .rv-more summary::-webkit-details-marker{display:none}
@@ -158,42 +151,65 @@
   .rv-more[open] .t-close{display:inline}
   .rv-more[open] .t-open{display:none}
 
-  .btn-lg{padding:15px 34px;font-size:1.1rem;box-shadow:0 0 0 4px rgba(201,162,39,.18)}
-  .btn-star{border:1px solid var(--gold);color:var(--gold);background:rgba(201,162,39,.08)}
-  .btn-star:hover{background:var(--gold);color:#10222b}
-  .links a.link-reviews{color:var(--gold);border:1px solid var(--gold-soft);border-radius:2px;padding:2px 14px;font-weight:600}
-  .links a.link-reviews:hover{background:var(--gold);color:#10222b}
+  #follow{background:var(--navy);color:#fff}
+  #follow .head p{color:var(--muted-d)}
+  .fl-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
+  @media(min-width:640px){.fl-grid{grid-template-columns:repeat(auto-fit,minmax(min(190px,100%),1fr))}}
+  .fl{min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:24px 14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:22px;transition:background .2s,border-color .2s}
+  .fl:hover{background:rgba(240,38,82,.16);border-color:var(--red)}
+  .fl-i{width:60px;height:60px;border-radius:50%;background:#fff;display:grid;place-items:center}
+  .fl-i .ic{width:30px;height:30px}
+  .fl-t{display:flex;flex-direction:column;min-width:0;max-width:100%;line-height:1.5}
+  .fl-t strong{font-weight:800;font-size:1.1rem}
+  .fl-t span{color:var(--muted-d);font-size:.82rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+  #contact{background:#fff}
+  .contact-grid{display:grid;grid-template-columns:1fr;gap:36px}
+  .contact-grid>*{min-width:0}
+  @media(min-width:780px){.contact-grid{grid-template-columns:1fr 1fr}}
+  .item{margin-bottom:22px}
+  .label{color:var(--red);font-weight:700;font-size:.88rem;margin-bottom:4px}
+  .val{font-size:1.05rem;user-select:all}
+  .phone{font-size:1.5rem;font-weight:800;letter-spacing:.02em;direction:ltr;display:inline-block;color:var(--navy)}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+  .sign{border:1px solid var(--line);border-radius:18px;overflow:hidden}
+  .sign img{width:100%;height:auto}
+  .sign p{padding:14px 16px;color:var(--muted);font-size:.92rem}
+
   .actions .btn{text-align:center}
   @media(max-width:779px){.actions .btn-lg{flex:1 1 100%}.actions .btn-line{flex:1 1 100%}}
   .dock{display:none}
   @media(max-width:779px){
     body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
-    .dock{display:grid;grid-template-columns:1.2fr 1fr;gap:10px;position:fixed;inset-inline:0;bottom:0;z-index:20;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(15,31,39,.96);backdrop-filter:blur(8px);border-top:1px solid var(--gold-soft)}
-    .dock .btn{padding:13px 8px;text-align:center;font-size:1rem}
+    .dock{display:grid;grid-template-columns:1.2fr 1fr;gap:10px;position:fixed;inset-inline:0;bottom:0;z-index:20;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(10,35,66,.97);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,.14)}
+    .dock .btn{padding:13px 8px;font-size:1rem}
   }
 
-  #follow{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .fl-grid{display:grid;grid-template-columns:1fr;gap:12px}
-  @media(min-width:640px){.fl-grid{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}}
-  .fl{display:flex;align-items:center;gap:14px;padding:16px 18px;border:1px solid var(--line);border-inline-start:3px solid var(--gold-soft);background:var(--ground);transition:border-color .2s,background .2s,transform .2s}
-  .fl:hover{border-color:var(--gold);background:rgba(201,162,39,.08)}
-  .fl-i{flex:0 0 auto;width:44px;height:44px;border-radius:50%;border:1px solid var(--gold-soft);display:grid;place-items:center;color:var(--gold)}
-  .fl-i svg{width:24px;height:24px}
-  .fl-t{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.5}
-  .fl-t strong{font-family:var(--display);font-size:1.15rem}
-  .fl-t span{color:var(--muted);font-size:.85rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .fl-go{color:var(--gold);font-size:1.2rem}
-  .fl:hover .fl-go{transform:translateX(-4px)}
-
-  footer{padding-block:28px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.85rem}
+  footer{padding-block:28px;background:var(--navy);text-align:center;color:var(--muted-d);font-size:.85rem}
 </style>
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="heart" viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2z"/></symbol>
+<symbol id="pulse" viewBox="0 0 24 24"><path fill="none" d="M3 12h4l2.2-5 3.6 10 2.4-5H21"/></symbol>
+<symbol id="cal" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="3.5"/><path fill="none" d="M4 10h16M8 3v4M16 3v4M9 15l2 2 4-4"/></symbol>
+<symbol id="star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8 6.8 19.5l1-5.8L3.6 9.6l5.8-.8z"/></symbol>
+<symbol id="pin" viewBox="0 0 24 24"><path d="M12 21s6-5.5 6-10.5a6 6 0 1 0-12 0C6 15.5 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.2"/></symbol>
+<symbol id="cath" viewBox="0 0 24 24"><path fill="none" d="M12 3v8m0 0l-5 5m5-5l5 5M7 16v5M17 16v5"/><circle cx="12" cy="3.5" r="1.2"/></symbol>
+<symbol id="echo" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="4"/><path fill="none" d="M6 12c1-3 2-3 3 0s2 3 3 0 2-3 3 0 1.5 2 2 1"/></symbol>
+<symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path fill="none" d="M12 7.5V12l3 2"/></symbol>
+<symbol id="fb" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path fill="none" d="M13.2 20v-6.5h2.2l.4-2.7h-2.6V9.2c0-.8.3-1.3 1.4-1.3h1.3V5.5"/></symbol>
+<symbol id="ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17" cy="7" r="1" fill="currentColor"/></symbol>
+<symbol id="tt" viewBox="0 0 24 24"><path fill="none" d="M14 4v10.2a3.3 3.3 0 1 1-3.3-3.3M14 4c.3 2.3 1.9 3.9 4.2 4.1"/></symbol>
+<symbol id="yt" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="3.5"/><path d="M10.2 9.3v5.4l4.6-2.7z" fill="currentColor" fill-opacity=".9"/></symbol>
+<symbol id="vz" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path fill="none" d="M8 9l4 7.5L16 9"/></symbol>
+</defs></svg>
+
 <header>
   <div class="wrap">
     <nav>
-      <div class="brand">د. بهاء القصاص</div>
+      <div class="brand"><span class="logo-mark"><svg class="ic" aria-hidden="true"><use href="#heart"/></svg></span>د. بهاء القصاص</div>
       <div class="links">
         <a href="#about">نبذة</a>
         <a href="#services">الخدمات</a>
@@ -215,8 +231,8 @@
       <h1>د. بهاء القصاص</h1>
       <p class="lead">استشاري أمراض القلب والقسطرة القلبية. تشخيص دقيق ومتابعة مستمرة لصحة قلبك، في عيادة بالمعادي الجديدة.</p>
       <div class="actions">
-        <a class="btn btn-gold btn-lg" href="https://link.gettap.co/bhaaelqassas" target="_blank" rel="noopener">احجز موعدك الآن</a>
-        <a class="btn btn-star btn-lg" href="#reviews">★ آراء المرضى</a>
+        <a class="btn btn-gold btn-lg" href="https://link.gettap.co/bhaaelqassas" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#cal"/></svg>احجز موعدك الآن</a>
+        <a class="btn btn-star btn-lg" href="#reviews"><svg class="ic" aria-hidden="true"><use href="#star"/></svg>آراء المرضى</a>
         <a class="btn btn-line" href="https://wa.me/201555054025" target="_blank" rel="noopener">واتساب</a>
       </div>
       <svg class="ecg" viewBox="0 0 640 90" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="رسم تخطيط القلب">
@@ -228,6 +244,14 @@
     </div>
   </div>
 </section>
+
+<div class="wrap trust">
+  <div class="trust-card">
+    <div class="tr"><span class="tr-i r"><svg class="ic" aria-hidden="true"><use href="#pulse"/></svg></span><div><strong>استشاري قلب وقسطرة</strong><span class="s">معهد القلب القومي</span></div></div>
+    <div class="tr"><span class="tr-i y"><svg class="ic" aria-hidden="true"><use href="#star"/></svg></span><div><strong>+٨٠ تقييم بخمس نجوم</strong><span class="s">من مرضى العيادة</span></div></div>
+    <div class="tr"><span class="tr-i b"><svg class="ic" aria-hidden="true"><use href="#pin"/></svg></span><div><strong>المعادي الجديدة</strong><span class="s">عيادات الشرق التخصصي</span></div></div>
+  </div>
+</div>
 
 <section id="about">
   <div class="wrap about-grid">
@@ -251,12 +275,12 @@
       <p>فحوصات وعلاج ومتابعة لأمراض القلب والشرايين.</p>
     </div>
     <div class="svc">
-      <div class="svc-row"><span class="dot"></span><div><h3>القسطرة القلبية التشخيصية والعلاجية</h3><p>تصوير الشرايين التاجية وعلاج الانسدادات.</p></div></div>
-      <div class="svc-row"><span class="dot"></span><div><h3>تخطيط القلب الكهربائي (ECG)</h3><p>فحص سريع لكشف اضطرابات ضربات القلب.</p></div></div>
-      <div class="svc-row"><span class="dot"></span><div><h3>إيكو على القلب</h3><p>تقييم عضلة القلب والصمامات بالموجات فوق الصوتية.</p></div></div>
-      <div class="svc-row"><span class="dot"></span><div><h3>هولتر القلب لمدة 48 ساعة</h3><p>تسجيل مستمر لنشاط القلب لكشف اضطرابات النظم التي لا تظهر في التخطيط العادي.</p></div></div>
-      <div class="svc-row"><span class="dot"></span><div><h3>متابعة الضغط والكوليسترول</h3><p>خطط علاج ووقاية لتقليل مخاطر أمراض القلب.</p></div></div>
-      <div class="svc-row"><span class="dot"></span><div><h3>متابعة مرضى القلب المزمنين</h3><p>متابعة دورية لضبط الحالة على المدى الطويل.</p></div></div>
+      <div class="svc-row"><span class="svc-i"><svg class="ic" aria-hidden="true"><use href="#cath"/></svg></span><div><h3>القسطرة القلبية التشخيصية والعلاجية</h3><p>تصوير الشرايين التاجية وعلاج الانسدادات.</p></div></div>
+      <div class="svc-row"><span class="svc-i"><svg class="ic" aria-hidden="true"><use href="#pulse"/></svg></span><div><h3>تخطيط القلب الكهربائي (ECG)</h3><p>فحص سريع لكشف اضطرابات ضربات القلب.</p></div></div>
+      <div class="svc-row"><span class="svc-i"><svg class="ic" aria-hidden="true"><use href="#echo"/></svg></span><div><h3>إيكو على القلب</h3><p>تقييم عضلة القلب والصمامات بالموجات فوق الصوتية.</p></div></div>
+      <div class="svc-row"><span class="svc-i"><svg class="ic" aria-hidden="true"><use href="#clock"/></svg></span><div><h3>هولتر القلب لمدة 48 ساعة</h3><p>تسجيل مستمر لنشاط القلب لكشف اضطرابات النظم التي لا تظهر في التخطيط العادي.</p></div></div>
+      <div class="svc-row"><span class="svc-i"><svg class="ic" aria-hidden="true"><use href="#heart"/></svg></span><div><h3>متابعة الضغط والكوليسترول</h3><p>خطط علاج ووقاية لتقليل مخاطر أمراض القلب.</p></div></div>
+      <div class="svc-row"><span class="svc-i"><svg class="ic" aria-hidden="true"><use href="#cal"/></svg></span><div><h3>متابعة مرضى القلب المزمنين</h3><p>متابعة دورية لضبط الحالة على المدى الطويل.</p></div></div>
     </div>
   </div>
 </section>
@@ -337,9 +361,11 @@
       <p>نصائح قلبية مبسطة وفيديوهات توعية بشكل مستمر على صفحات الدكتور.</p>
     </div>
     <div class="fl-grid">
-<a class="fl" href="https://www.facebook.com/1353697501156643" target="_blank" rel="noopener me"><span class="fl-i"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M13.2 19v-6.2h2.1l.4-2.5h-2.5V8.9c0-.8.3-1.3 1.4-1.3h1.2V5.4c-.4 0-1.1-.1-2-.1-2 0-3.3 1.2-3.3 3.4v1.6H8.4v2.5h2.1V19" fill="currentColor"/></svg></span><span class="fl-t"><strong>فيسبوك</strong><span dir="auto">Dr. Bahaa AL Qassas - عيادة القلب</span></span><span class="fl-go" aria-hidden="true">&larr;</span></a>
-<a class="fl" href="https://www.instagram.com/bahaa_elqassas/" target="_blank" rel="noopener me"><span class="fl-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.8" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></span><span class="fl-t"><strong>انستجرام</strong><span dir="auto">@bahaa_elqassas</span></span><span class="fl-go" aria-hidden="true">&larr;</span></a>
-<a class="fl" href="https://www.tiktok.com/@bhaarefaay" target="_blank" rel="noopener me"><span class="fl-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4v10.2a3.3 3.3 0 1 1-3.3-3.3M14 4c.3 2.3 1.9 3.9 4.2 4.1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="fl-t"><strong>تيك توك</strong><span dir="auto">@bhaarefaay</span></span><span class="fl-go" aria-hidden="true">&larr;</span></a>
+      <a class="fl" href="https://www.facebook.com/1353697501156643" target="_blank" rel="noopener me"><span class="fl-i" style="color:#1E5AA8"><svg class="ic" aria-hidden="true"><use href="#fb"/></svg></span><span class="fl-t"><strong>فيسبوك</strong><span dir="auto">Dr. Bahaa AL Qassas - عيادة القلب</span></span></a>
+      <a class="fl" href="https://www.instagram.com/bahaa_elqassas/" target="_blank" rel="noopener me"><span class="fl-i" style="color:#F02652"><svg class="ic" aria-hidden="true"><use href="#ig"/></svg></span><span class="fl-t"><strong>انستجرام</strong><span dir="auto">@bahaa_elqassas</span></span></a>
+      <a class="fl" href="https://www.tiktok.com/@bhaarefaay" target="_blank" rel="noopener me"><span class="fl-i" style="color:#0A2342"><svg class="ic" aria-hidden="true"><use href="#tt"/></svg></span><span class="fl-t"><strong>تيك توك</strong><span dir="auto">@bhaarefaay</span></span></a>
+      <a class="fl" href="https://youtube.com/@bhaa01668444" target="_blank" rel="noopener me"><span class="fl-i" style="color:#E5262B"><svg class="ic" aria-hidden="true"><use href="#yt"/></svg></span><span class="fl-t"><strong>يوتيوب</strong><span dir="auto">@bhaa01668444</span></span></a>
+      <a class="fl" href="https://www.vezeeta.com/en/dr/doctor-bahaa-al-qassas-cardiology-and-vascular-disease" target="_blank" rel="noopener me"><span class="fl-i" style="color:#00A3A1"><svg class="ic" aria-hidden="true"><use href="#vz"/></svg></span><span class="fl-t"><strong>فيزيتا</strong><span dir="auto">احجز من فيزيتا</span></span></a>
     </div>
   </div>
 </section>
@@ -392,7 +418,7 @@
   "description":"استشاري أمراض القلب والقسطرة القلبية بمعهد القلب القومي",
   "telephone":"+201555054025",
   "address":{"@type":"PostalAddress","streetAddress":"شارع النصر، تقسيم اللاسلكي، المعادي الجديدة","addressLocality":"القاهرة","postalCode":"11728","addressCountry":"EG"},
-  "sameAs":["https://www.facebook.com/1353697501156643","https://www.instagram.com/bahaa_elqassas/","https://www.tiktok.com/@bhaarefaay"],
+  "sameAs":["https://www.facebook.com/1353697501156643","https://www.instagram.com/bahaa_elqassas/","https://www.tiktok.com/@bhaarefaay","https://youtube.com/@bhaa01668444","https://www.vezeeta.com/en/dr/doctor-bahaa-al-qassas-cardiology-and-vascular-disease"],
   "worksFor":{"@type":"MedicalClinic","name":"عيادات الشرق التخصصي"}
 }
 </script>
