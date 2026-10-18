@@ -478,5 +478,22 @@
 })();
 </script>
 
+<script>
+(function(){
+  var B='https://api.counterapi.dev/v1/bhaaelqassas-clinic/visits', seen=false;
+  try{seen=sessionStorage.getItem('v')==='1';}catch(e){}
+  var showStats=location.hash==='#stats';
+  if(seen&&!showStats) return;
+  fetch(seen?B:B+'/up').then(function(r){return r.json();}).then(function(d){
+    try{sessionStorage.setItem('v','1');}catch(e){}
+    if(showStats){
+      var el=document.createElement('div');
+      el.style.cssText='position:fixed;top:12px;left:12px;z-index:9999;background:#0A2342;color:#fff;border:2px solid #F02652;border-radius:12px;padding:10px 16px;font:800 16px Cairo,sans-serif;direction:ltr';
+      el.textContent='Total visits: '+d.count;
+      document.body.appendChild(el);
+    }
+  }).catch(function(){});
+})();
+</script>
 </body>
 </html>
