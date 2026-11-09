@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>عيادة د. بهاء القصاص - استشاري القلب والقسطرة</title>
+<meta property="og:title" content="احجز ميعادك - عيادة د. بهاء القصاص استشاري القلب والقسطرة">
+<meta property="og:description" content="عيادات الشرق التخصصي - المعادي الجديدة">
+<style>
+:root{--bg:#0f1b2d;--card:#16263f;--fg:#fff;--mut:#b9c6da;--red:#d7263d;--grn:#25a244}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:16px}
+.c{background:var(--card);border-radius:16px;padding:22px 18px;max-width:420px;width:100%;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.35)}
+h1{font-size:21px;margin:0 0 6px}p{color:var(--mut);margin:8px 0;line-height:1.7;font-size:15px}
+a.b{display:block;margin:14px 0 0;padding:15px;border-radius:12px;background:var(--red);color:#fff;font-weight:700;font-size:18px;text-decoration:none}
+a.w{background:var(--grn);font-size:16px}
+.tip{display:none;margin-top:16px;padding:12px;border:1px dashed #4a6086;border-radius:12px;font-size:14px;color:#dfe7f3;line-height:1.8}
+.sp{width:28px;height:28px;border:3px solid #4a6086;border-top-color:#fff;border-radius:50%;margin:10px auto;animation:r 1s linear infinite}@keyframes r{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<div class="c">
+  <h1 id="t">بيفتح صفحة الحجز…</h1>
+  <p>عيادة د. بهاء القصاص · استشاري القلب والقسطرة<br>عيادات الشرق التخصصي · المعادي الجديدة</p>
+  <div class="sp" id="sp"></div>
+  <a class="b" id="go" href="#">افتح الصفحة</a>
+  <div class="tip" id="tip">لو الصفحة مافتحتش: دوس على <b>⋯</b> أو <b>⋮</b> اللي فوق على الشمال واختار <b>«فتح في المتصفح»</b> أو <b>Open in browser</b>.</div>
+  <a class="b w" href="https://wa.me/201555054025">أو احجز على الواتساب 01555054025</a>
+</div>
+<script>
+(function(){
+  var E='https://script.google.com/macros/s/AKfycbzGr62VoW9OF4vAshNA15cn5tMnH1HZoYcvvaAl7Qt30BuENBq9YBNazesVNXkvf5jR/exec';
+  var P={b:['?b=1','بيفتح صفحة الحجز…','احجز ميعادك'],c:['?c=1','بيفتح صفحة الاستشارة…','ابعت استشارتك'],p:['?p=1','بيفتح صفحة المريض…','افتح روشتاتي وتحاليلي'],r:['?r=1','بيفتح صفحة التسجيل…','سجّل بياناتك'],i:['?i=1','بيفتح الصفحة…','افتح الصفحة']};
+  var m=location.search.match(/[?&]to=([a-z])/), k=m&&P[m[1]]?m[1]:'b', u=E+P[k][0];
+  document.getElementById('t').textContent=P[k][1];
+  var go=document.getElementById('go'); go.href=u; go.textContent=P[k][2];
+  var ua=navigator.userAgent||'', inApp=/FBAN|FBAV|FB_IAB|FBIOS|FB4A|Instagram|Messenger|Line\/|Snapchat|TikTok|musical_ly/i.test(ua);
+  var and=/Android/i.test(ua), ios=/iPhone|iPad|iPod/i.test(ua);
+  function tip(){document.getElementById('sp').style.display='none';document.getElementById('tip').style.display='block'}
+  if(!inApp){location.replace(u);return}
+  if(and){
+    var it='intent://'+u.replace(/^https:\/\//,'')+'#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url='+encodeURIComponent(u)+';end';
+    go.href=it; location.href=it; setTimeout(tip,2500); return;
+  }
+  if(ios){ go.href='x-safari-'+u; location.href='x-safari-'+u; setTimeout(tip,2500); return; }
+  location.replace(u);
+})();
+</script>
+</body>
+</html>
