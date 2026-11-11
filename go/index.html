@@ -28,8 +28,8 @@ a.w{background:var(--grn);font-size:16px}
 </div>
 <script>
 (function(){
-  var E='https://script.google.com/macros/s/AKfycbzGr62VoW9OF4vAshNA15cn5tMnH1HZoYcvvaAl7Qt30BuENBq9YBNazesVNXkvf5jR/exec';
-  var P={b:['?b=1','بيفتح صفحة الحجز…','احجز ميعادك'],c:['?c=1','بيفتح صفحة الاستشارة…','ابعت استشارتك'],p:['?p=1','بيفتح صفحة المريض…','افتح روشتاتي وتحاليلي'],r:['?r=1','بيفتح صفحة التسجيل…','سجّل بياناتك'],i:['?i=1','بيفتح الصفحة…','افتح الصفحة']};
+  var E='https://drbahaaelqassas.com';
+  var P={b:['/book','بيفتح صفحة الحجز…','احجز ميعادك'],c:['/consult','بيفتح صفحة الاستشارة…','ابعت استشارتك'],p:['/patient','بيفتح صفحة المريض…','افتح روشتاتي وتحاليلي'],r:['/register','بيفتح صفحة التسجيل…','سجّل بياناتك'],i:['/info','بيفتح الصفحة…','افتح الصفحة']};
   var m=location.search.match(/[?&]to=([a-z])/), k=m&&P[m[1]]?m[1]:'b', u=E+P[k][0];
   document.getElementById('t').textContent=P[k][1];
   var go=document.getElementById('go'); go.href=u; go.textContent=P[k][2];
