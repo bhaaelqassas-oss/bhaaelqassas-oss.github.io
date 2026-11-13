@@ -653,5 +653,37 @@
 })();
 </script>
 <script>(function(){var P=document.querySelectorAll("#vgrid .vc-poster");function L(p){var a=p.closest(".vc");if(!a||p.getAttribute("data-vt"))return;p.setAttribute("data-vt","1");p.style.backgroundImage="url(/vt/"+a.getAttribute("data-id")+")";p.style.backgroundSize="cover";p.style.backgroundPosition="center"}if("IntersectionObserver" in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){L(e.target);o.unobserve(e.target)}})},{rootMargin:"400px"});P.forEach(function(p){o.observe(p)})}else P.forEach(L)})();</script>
+<style>
+#bkc{position:fixed;inset:0;z-index:9999;background:rgba(10,35,66,.6);display:flex;align-items:flex-end;justify-content:center;padding:16px}
+#bkc[hidden]{display:none}
+#bkc .bx{background:#fff;border-radius:18px;max-width:420px;width:100%;padding:22px 18px 16px;font-family:var(--body);box-shadow:0 20px 60px rgba(0,0,0,.3);margin-bottom:max(8px,env(safe-area-inset-bottom))}
+@media(min-width:640px){#bkc{align-items:center}}
+#bkc h3{margin:0 0 4px;color:var(--navy);font-size:1.15rem;text-align:center}
+#bkc p{margin:0 0 14px;color:#5a6b80;font-size:.9rem;text-align:center}
+#bkc a.o{display:flex;align-items:center;gap:12px;text-decoration:none;border-radius:14px;padding:14px 16px;margin-bottom:10px;font-weight:800;font-size:1rem}
+#bkc a.o small{display:block;font-weight:600;font-size:.8rem;opacity:.85}
+#bkc a.on{background:var(--red);color:#fff}
+#bkc a.wa{background:#25D366;color:#fff}
+#bkc .e{font-size:1.5rem;line-height:1}
+#bkc .x{display:block;width:100%;background:none;border:0;color:#5a6b80;font:700 .9rem var(--body);padding:8px;cursor:pointer}
+</style>
+<div id="bkc" hidden role="dialog" aria-modal="true" aria-labelledby="bkcT"><div class="bx">
+<h3 id="bkcT">احجز موعدك</h3><p id="bkcS">اختار الطريقة اللي تريحك</p>
+<a class="o on" id="bkcOn" href="/book"><span class="e">📅</span><span><span id="bkcOnT">احجز أونلاين</span><small id="bkcOnS">اختار اليوم والساعة بنفسك وهيوصلك تأكيد</small></span></a>
+<a class="o wa" id="bkcWa" href="https://wa.me/201555054025" target="_blank" rel="noopener"><span class="e">💬</span><span><span id="bkcWaT">احجز على الواتساب</span><small id="bkcWaS">كلّم العيادة مباشرة</small></span></a>
+<button class="x" id="bkcX" type="button">إلغاء</button>
+</div></div>
+<script>(function(){var m=document.getElementById("bkc");if(!m)return;
+var TX={ar:["احجز موعدك","اختار الطريقة اللي تريحك","احجز أونلاين","اختار اليوم والساعة بنفسك وهيوصلك تأكيد","احجز على الواتساب","كلّم العيادة مباشرة","إلغاء"],en:["Book an appointment","Choose what suits you","Book online","Pick your day and time, and get a confirmation","Book on WhatsApp","Message the clinic directly","Cancel"]};
+var ids=["bkcT","bkcS","bkcOnT","bkcOnS","bkcWaT","bkcWaS","bkcX"];
+function close(){m.hidden=true;document.body.style.overflow=""}
+document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a.btn[href^="https://wa.me/201555054025"]');if(!a||e.ctrlKey||e.metaKey)return;
+ e.preventDefault();var l=document.documentElement.lang==="en"?"en":"ar";ids.forEach(function(id,i){document.getElementById(id).textContent=TX[l][i]});
+ document.getElementById("bkcWa").href=a.href;m.hidden=false;document.body.style.overflow="hidden";
+ try{gtag("event","book_choice_open")}catch(x){}},true);
+document.getElementById("bkcX").onclick=close;m.addEventListener("click",function(e){if(e.target===m)close()});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!m.hidden)close()});
+document.getElementById("bkcWa").addEventListener("click",function(){setTimeout(close,300)});
+})();</script>
 </body>
 </html>
