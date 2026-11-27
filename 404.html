@@ -9,6 +9,7 @@
 (function(){
   var p = location.pathname.replace(/\/+$/,'') || '/';
   var first = '/' + (p.split('/')[1] || '');
+  if (/^\/review/i.test(p)) { location.replace('/review/'); return; }
   var SYS = ['/book','/booking','/consult','/info','/emergency','/register','/patient','/app'];
   if (SYS.indexOf(first) >= 0) {
     location.replace('https://app.drbahaaelqassas.com' + location.pathname + location.search + location.hash);
